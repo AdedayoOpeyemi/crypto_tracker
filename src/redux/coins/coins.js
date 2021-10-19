@@ -1,15 +1,15 @@
 // Action types
-const FETCH_API_DATA = 'COINS/FETCH_API_DATA';
+// const FETCH_API_DATA = 'COINS/FETCH_API_DATA';
 const LOAD_DATA = 'COINS/LOAD_COINS_DATA';
 
 const initialState = {};
 
 
 // action creators
-export const fetchData = (payload) => ({
-  type: FETCH_API_DATA,
-  payload,
-});
+// export const fetchData = (payload) => ({
+//   type: FETCH_API_DATA,
+//   payload,
+// });
 
 export const loadData = (payload) => ({
   type: LOAD_DATA,
