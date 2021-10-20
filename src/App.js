@@ -1,7 +1,7 @@
 import {
   Route, Switch,
 } from 'react-router-dom';
-// import Details from './components/DetailsPage';
+import Details from './components/CoinDetails';
 // import Home from './components/HomePage';
 import NavBar from './components/Navbar';
 import CoinList from './components/CoinList';
@@ -13,7 +13,7 @@ function App() {
       <main>
         <Switch>
           <Route path="/coin/:id">
-            {/* <Details /> */}
+            <Details />
             <p>This Coin</p>
           </Route>
           <Route path="/">

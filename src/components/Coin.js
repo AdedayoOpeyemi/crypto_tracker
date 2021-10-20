@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Coin = (props) => {
   const {
-    id, symbol, name, rank, price_usd, market_cap_usd, volume24, percent_change_24h
+    id, symbol, name, nameid, rank, price_usd, market_cap_usd, volume24, percent_change_24h
   } = props.coin;
 
   return (
     <Link
       key={id}
-      to={`/coin/${symbol}`}
+      to={`/coin/${id}`}
       className="div coin-card p-5"
       data-testid={`button-${rank}`}
     >
