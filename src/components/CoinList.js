@@ -1,13 +1,18 @@
-import { React, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { bindActionCreators } from 'redux';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchApiData } from '../redux/coins/coins';
 import Coin from './Coin';
 import Loading from './Loading';
+import FilterInput from './FilterInput';
 
 const Coinlist = () => {
   const coins = useSelector((state) => state.coins.data);
   const loading = useSelector((state) => state.coins.loading);
+  const [filtered, setFiltered] = useState('');
+  const updateFilter = (e) => {
+    setFiltered(e.target.value)
+  }
   const dispatch = useDispatch();
   const loadCoinAction = bindActionCreators(fetchApiData, dispatch);
 
@@ -31,18 +36,25 @@ const Coinlist = () => {
   //     </div>
   //   )
   // }
+
+  // coin.name.include(value) || coin.name.include(value) 
   
 
   if (coins) {
     const allCoins = coins;
     console.log(allCoins);
     ans = Object.values(allCoins).filter(({ name }) => (
-      name.toLowerCase()
+      name.toLowerCase().startsWith(filtered.toLowerCase())
     )).map((coin, id, rank, price_usd) => (
       <Coin key={id} name={rank} coin={coin} />
     ));
   }
-  return ans
+  return (
+    <>
+      <FilterInput updateFilter={updateFilter} />
+      {ans}
+    </>
+  )
 }
 
 export default Coinlist;
