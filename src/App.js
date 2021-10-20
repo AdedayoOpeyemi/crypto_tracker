@@ -17,7 +17,7 @@ function App() {
             <p>This Coin</p>
           </Route>
           <Route path="/">
-          <CoinList className="coinlist-holde"/>
+            <CoinList className="coinlist-holde" />
           </Route>
         </Switch>
       </main>

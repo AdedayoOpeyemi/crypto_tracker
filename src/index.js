@@ -10,7 +10,6 @@ import store from './redux/configureStore';
 import { fetchApiData } from './redux/coins/coins';
 import reportWebVitals from './reportWebVitals';
 
-
 store.dispatch(fetchApiData);
 
 ReactDOM.render(
@@ -21,7 +20,7 @@ ReactDOM.render(
       </Router>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
