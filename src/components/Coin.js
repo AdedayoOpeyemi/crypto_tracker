@@ -1,11 +1,14 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Coin = (props) => {
+  const { coin, index } = props;
   const {
-    id, name, rank, price_usd, market_cap_usd, volume24, percent_change_24h
-  } = props.coin;
-  const { index } = props;
+    id, name, rank, price_usd: priceUsd,
+    market_cap_usd: marketCapUsd,
+    volume24, percent_change_24h: percentChange24h,
+  } = coin;
 
   return (
     <Link
@@ -19,19 +22,12 @@ const Coin = (props) => {
     >
       <p>{name}</p>
       <p>{rank}</p>
-      <p>{price_usd}</p>
-      <p>{market_cap_usd}</p>
+      <p>{priceUsd}</p>
+      <p>{marketCapUsd}</p>
       <p>{volume24}</p>
-      <p>{percent_change_24h}</p>
-      {/* <Country
-        id={countries.indexOf(country)}
-        carteName={id}
-        name={name}
-        regions={regions}
-        todayConfirmed={todayConfirmed}
-        todayNewConfirmed={todayNewConfirmed} */}
+      <p>{percentChange24h}</p>
     </Link>
   );
-}
+};
 
 export default Coin;

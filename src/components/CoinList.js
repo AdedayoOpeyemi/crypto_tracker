@@ -11,8 +11,8 @@ const Coinlist = () => {
   const loading = useSelector((state) => state.coins.loading);
   const [filtered, setFiltered] = useState('');
   const updateFilter = (e) => {
-    setFiltered(e.target.value)
-  }
+    setFiltered(e.target.value);
+  };
   const dispatch = useDispatch();
   const loadCoinAction = bindActionCreators(fetchApiData, dispatch);
 
@@ -23,45 +23,24 @@ const Coinlist = () => {
     return null;
   }, [loading]);
 
-  console.log(coins);
   let ans = (<Loading />);
-  // const AllCoins = coins.coins;
-  // console.log(coins);
-  // if(coins) {
-  //   return (
-  //     <div>
-  //       {AllCoins.forEach((coin, rank)=> (
-  //         <Coin key={rank} coin={coin}/>
-  //       ))}
-  //     </div>
-  //   )
-  // }
-
-  // coin.name.include(value) || coin.name.include(value) 
-  
 
   if (coins) {
     const allCoins = coins;
-    console.log(allCoins);
     ans = Object.values(allCoins).filter(({ name }) => (
       name.toLowerCase().startsWith(filtered.toLowerCase())
-    )).map((coin, index) => {
-      console.log(index);
-      console.log(coin);
-      return <Coin key={coin.id} index={index} name={coin.rank} coin={coin} />
-    });
+    )).map((coin, index) => <Coin key={coin.id} index={index} name={coin.rank} coin={coin} />);
   }
   return (
     <>
       <FilterInput updateFilter={updateFilter} />
-      <div class="container">
-        <div class="row row-cols-2">
+      <div className="container">
+        <div className="row row-cols-2">
           {ans}
         </div>
       </div>
-  
     </>
-  )
-}
+  );
+};
 
 export default Coinlist;
