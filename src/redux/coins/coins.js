@@ -3,8 +3,7 @@
 const LOAD_DATA = 'COINS/LOAD_COINS_DATA';
 const LOADING = 'COINS/LOADING';
 
-const initialState = {data: [], loading: true};
-
+const initialState = { data: [], loading: true };
 
 // action creators
 // export const fetchData = (payload) => ({
@@ -18,7 +17,7 @@ export const loadData = (payload) => ({
 });
 
 export const fetchApiData = () => async (dispatch) => {
-  dispatch({type: LOADING })
+  dispatch({ type: LOADING });
   const res = await fetch('https://api.coinlore.net/api/tickers/');
   const data = await res.json();
   // console.log("ABC")
@@ -29,9 +28,9 @@ export const fetchApiData = () => async (dispatch) => {
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_DATA:
-      return { ...action.payload, loading: false }
+      return { ...action.payload, loading: false };
     case LOADING:
-      return {loading: true}
+      return { loading: true };
     default: return state;
   }
 };

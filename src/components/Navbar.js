@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaMicrophone } from 'react-icons/fa'
+import { FaMicrophone } from 'react-icons/fa';
 // import { IoMdSettings } from 'react-icons/io';
 // import { FaAngleLeft, FaMicrophone } from 'react-icons/fa';
 
