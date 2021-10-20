@@ -1,8 +1,9 @@
 // Action types
 // const FETCH_API_DATA = 'COINS/FETCH_API_DATA';
 const LOAD_DATA = 'COINS/LOAD_COINS_DATA';
+const LOADING = 'COINS/LOADING';
 
-const initialState = {};
+const initialState = {data: [], loading: true};
 
 
 // action creators
@@ -16,18 +17,21 @@ export const loadData = (payload) => ({
   payload,
 });
 
-export const fetchApiData = async (dispatch) => {
-  const res = await fetch('https://coinlib.io/api/v1/coinlist?key=7aadada07bb3eee9&pref=USD&page=1&order=market_cap_desc');
+export const fetchApiData = () => async (dispatch) => {
+  dispatch({type: LOADING })
+  const res = await fetch('https://api.coinlore.net/api/tickers/');
   const data = await res.json();
-  console.log("ABC")
-  console.log(data)
+  // console.log("ABC")
+  // console.log(data)
   dispatch(loadData(data));
 };
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_DATA:
-      return action.payload;
+      return { ...action.payload, loading: false }
+    case LOADING:
+      return {loading: true}
     default: return state;
   }
 };

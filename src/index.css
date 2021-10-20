@@ -30,3 +30,7 @@ code {
 .light-magenta {
   background: var(--light-magenta);
 }
+
+.coinlist-holde {
+  padding: 20px;
+}
