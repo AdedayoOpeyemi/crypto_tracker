@@ -1,6 +1,7 @@
 :root {
   --lightest-primary: #5383e1;
   --light-primary: #4369b2;
+
   /* --intense-magenta: #c22f6c;
   --dark-primary: #35548b;
   --white-with-little-red: #d337b4; */
@@ -8,25 +9,40 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 }
 
 .light-primary {
-  background-color: var(--lightest-primary)
+  background-color: var(--lightest-primary);
 }
 
 .primary-blue {
-  background-color: var(--light-primary)
+  background-color: var(--light-primary);
 }
+
 .intense-magenta {
   background-color: var(--intense-magenta) !important;
 }
