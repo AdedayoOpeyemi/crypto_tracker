@@ -1,9 +1,9 @@
 :root {
   --lightest-primary: #5383e1;
   --light-primary: #4369b2;
-  --intense-magenta: #c22f6c;
+  /* --intense-magenta: #c22f6c;
   --dark-primary: #35548b;
-  --white-with-little-red: #d337b4;
+  --white-with-little-red: #d337b4; */
 }
 
 body {
@@ -21,6 +21,10 @@ code {
 }
 
 .light-primary {
+  background-color: var(--lightest-primary)
+}
+
+.primary-blue {
   background-color: var(--light-primary)
 }
 .intense-magenta {

@@ -45,14 +45,21 @@ const Coinlist = () => {
     console.log(allCoins);
     ans = Object.values(allCoins).filter(({ name }) => (
       name.toLowerCase().startsWith(filtered.toLowerCase())
-    )).map((coin, id, rank, price_usd) => (
-      <Coin key={id} name={rank} coin={coin} />
-    ));
+    )).map((coin, index) => {
+      console.log(index);
+      console.log(coin);
+      return <Coin key={coin.id} index={index} name={coin.rank} coin={coin} />
+    });
   }
   return (
     <>
       <FilterInput updateFilter={updateFilter} />
-      {ans}
+      <div class="container">
+        <div class="row row-cols-2">
+          {ans}
+        </div>
+      </div>
+  
     </>
   )
 }

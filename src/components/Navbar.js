@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { FaMicrophone } from 'react-icons/fa'
 // import { IoMdSettings } from 'react-icons/io';
 // import { FaAngleLeft, FaMicrophone } from 'react-icons/fa';
 
@@ -21,7 +22,7 @@ const NavBar = () => {
           Cyrpto Tracker
         </h3>
         <div className="m-0 d-flex flex-row p-1">
-          <p>Microphone</p>
+          <FaMicrophone />
           <div className="mx-2" />
           <p>Settings</p>
         </div>
