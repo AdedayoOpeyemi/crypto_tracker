@@ -54,3 +54,18 @@ code {
 .coinlist-holde {
   padding: 20px;
 }
+
+.coinCardImage {
+  max-width: 80px;
+  width: 50%;
+}
+
+a {
+  color:#fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#fff;
+  text-decoration: none;
+}
