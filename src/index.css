@@ -23,6 +23,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: skyblue;
+  max-width: 600px;
 }
 
 code {
@@ -57,7 +59,7 @@ code {
 
 .coinCardImage {
   max-width: 80px;
-  width: 50%;
+  width: 25%;
 }
 
 a {
@@ -68,4 +70,29 @@ a {
 a:hover {
   color:#fff;
   text-decoration: none;
+}
+
+.filterContainer {
+  height: 200px;
+  /* width: 100%; */
+  /* background-color: rgb(117, 188, 197);
+   */
+   background-color: var(--lightest-primary)
+}
+
+.App-container {
+  max-width: 600px;
+}
+
+.input-form {
+  width: 50%;
+  min-width: 120px;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
 }

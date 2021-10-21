@@ -33,7 +33,11 @@ const Coinlist = () => {
   }
   return (
     <>
-      <FilterInput updateFilter={updateFilter} />
+      <div className="container">
+        <div className="row filterContainer">
+          <FilterInput updateFilter={updateFilter} />
+        </div>
+      </div>
       <div className="container position-relative">
         <div className="row row-cols-2">
           {ans}
