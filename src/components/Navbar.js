@@ -8,7 +8,7 @@ const NavBar = () => {
   const { pathname } = useLocation();
   return (
     <header className="py-2 shadow">
-      <nav className="px-4 text-white light-primary d-flex justify-content-between">
+      <nav className="px-4 text-white primary-blue d-flex justify-content-between">
         <Link to="/" className="text-decoration-none text-white fw-bold d-flex align-items-center justify-content-center">
           { pathname !== '/'
             ? (

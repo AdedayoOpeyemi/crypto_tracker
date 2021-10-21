@@ -62,6 +62,11 @@ code {
   width: 25%;
 }
 
+.detailsCardImage {
+  width: 200px;
+  padding: 20px;
+}
+
 a {
   color:#fff;
   text-decoration: none;
@@ -74,10 +79,11 @@ a:hover {
 
 .filterContainer {
   height: 200px;
-  /* width: 100%; */
-  /* background-color: rgb(117, 188, 197);
-   */
-   background-color: var(--lightest-primary)
+  background-color: var(--lightest-primary)
+}
+
+.coin-header {
+  height: 240px;
 }
 
 .App-container {
@@ -95,4 +101,9 @@ a:hover {
 
 input[type=text]:focus {
   border: 3px solid #555;
+}
+
+.coin-name {
+  font-size: 40px;
+  font-style: bold;
 }
