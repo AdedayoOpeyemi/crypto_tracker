@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <main className="min-vh-100">
+      <main>
         <Switch>
           <Route path="/coin/:id">
             <Details className="h-100" />
