@@ -27,6 +27,12 @@ const Coin = (props) => {
         <div>
           <img
             src={`https://cryptologos.cc/logos/${nameid}-${symbol.toLowerCase()}-logo.svg`}
+            onError={(event) => {
+              // eslint-disable-next-line no-param-reassign
+              event.target.src = 'https://comnplayscience.eu/app/images/notfound.png';
+              // eslint-disable-next-line no-param-reassign
+              event.onerror = null;
+            }}
             alt={name}
             className="coinCardImage"
           />

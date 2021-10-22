@@ -42,18 +42,12 @@ function Details() {
           <div className="d-flex flex-column justify-content-center text-center">
             <img
               src={`https://cryptologos.cc/logos/${nameid}-${symbol.toLowerCase()}-logo.svg`}
-              // onerror={
-              //   this.onerror=null,
-              //   this.src='https://comnplayscience.eu/app/images/notfound.png'
-              // }
-              // eslint-disable-next-line react/no-unknown-property
               onError={(event) => {
                 // eslint-disable-next-line no-param-reassign
                 event.target.src = 'https://comnplayscience.eu/app/images/notfound.png';
                 // eslint-disable-next-line no-param-reassign
                 event.onerror = null;
               }}
-              // onError={this.src = 'https://comnplayscience.eu/app/images/notfound.png'}
               alt={name}
               className="detailsImage d-block mx-auto"
             />
