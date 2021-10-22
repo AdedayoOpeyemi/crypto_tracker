@@ -24,9 +24,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: rgb(50, 91, 107); */
-  background: rgb(67,105,178);
-  background: linear-gradient(315deg, rgba(67,105,178,1) 0%, rgba(88,137,228,1) 41%, rgba(182,198,202,1) 100%);
+  background: rgb(67, 105, 178);
+  background: linear-gradient(315deg, rgba(67, 105, 178, 1) 0%, rgba(88, 137, 228, 1) 41%, rgba(182, 198, 202, 1) 100%);
 }
 
 code {
@@ -42,6 +41,7 @@ code {
 main {
   height: calc(100vh - 51px);
 }
+
 header {
   background-color: var(--primary-nav-color);
 }
@@ -98,10 +98,6 @@ a:hover {
   height: 320px;
 }
 
-/* .App-container {
-  max-width: 600px;
-} */
-
 .input-form {
   width: 50%;
   min-width: 120px;
@@ -126,7 +122,6 @@ input[type=text]:focus {
 
 .details-body {
   background-color: var(--dark-shade-card);
-  height: calc() 600px;
 }
 
 .detailsImage {
