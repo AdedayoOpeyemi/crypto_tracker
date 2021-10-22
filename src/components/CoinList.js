@@ -42,7 +42,7 @@ const Coinlist = () => {
         <p>Top 100 Coins</p>
       </div>
       <div className="container-fluid position-relative">
-        <div className="row row-cols-2">
+        <div className="row row-cols-2" id="all-coins">
           {ans}
         </div>
       </div>
