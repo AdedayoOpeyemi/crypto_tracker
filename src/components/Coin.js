@@ -16,7 +16,7 @@ const Coin = (props) => {
       to={`/coin/${id}`}
       className={`
       div col coin-card p-3 d-block position-relative no-underline
-      ${([1, 0, 0, 1][index % 4]) === 0 ? 'light-primary' : 'primary-blue'}
+      ${([1, 0, 0, 1][index % 4]) === 0 ? 'light-card' : 'dark-card'}
       `}
       data-testid={`button-${id}`}
     >
