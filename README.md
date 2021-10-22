@@ -23,7 +23,7 @@ Original design idea by: [Nelson Sakwa on Behance](https://www.behance.net/sakwa
 
 Flag pictures are from website [www.countryflags.io](https://www.countryflags.io/)
 
-![Home Page](./src/images/homepage.png)  ![Details Page](./src/img/detailsPage.png)
+![Home Page](./src/images/homepage.png)  ![Details Page](./src/images/detailsPage.png)
 
 ## Built With
 
@@ -38,7 +38,7 @@ Flag pictures are from website [www.countryflags.io](https://www.countryflags.io
 
 ## Deployment Live Demo
 
-Deployed with Heroku
+Deployed with Netlify
   - [Live Demo](https://quirky-wiles-dc9047.netlify.app//)
 
 ## Getting Started

@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaArrowCircleRight } from 'react-icons/fa';
 
@@ -51,6 +51,18 @@ const Coin = (props) => {
       </div>
     </Link>
   );
+};
+
+Coin.propTypes = {
+  coin: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    nameid: PropTypes.string.isRequired,
+    symbol: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price_usd: PropTypes.number.isRequired,
+    percent_change_24h: PropTypes.number.isRequired,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default Coin;

@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FilterInput = (props) => {
   const { updateFilter } = props;
@@ -9,4 +9,9 @@ const FilterInput = (props) => {
     </div>
   );
 };
+
+FilterInput.propTypes = {
+  updateFilter: PropTypes.shape.isRequired,
+};
+
 export default FilterInput;
