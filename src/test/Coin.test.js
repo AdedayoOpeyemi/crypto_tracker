@@ -5,7 +5,8 @@ import { render } from '@testing-library/react';
 import coinlibAPI from './__mocks__/coinlibAPI';
 import store from '../redux/configureStore';
 import { loadData } from '../redux/coins/coins';
-import CoinList from '../components/CoinList';
+// import App from '../App';
+import Coin from '../components/Coin';
 
 const renderWithRedux = (component) => ({
   ...render(
@@ -17,21 +18,17 @@ const renderWithRedux = (component) => ({
   ),
 });
 
-describe('Coinlist component', () => {
+describe('Coin component', () => {
   beforeEach(() => {
     store.dispatch(loadData(coinlibAPI));
   });
 
-  test('It loads all of the 100 coins from the store', () => {
-    renderWithRedux(<CoinList />);
+  test('COin details components', () => {
     const { coins } = store.getState();
-    const coinList = document.getElementById('all-coins');
-    expect(coinList.childNodes.length).toBe(coins.data.length);
-  });
-
-  test('Childnode of the list are links', () => {
-    renderWithRedux(<CoinList />);
-    const coinList = document.getElementById('all-coins');
-    expect(coinList.childNodes[0].nodeName === 'A').toBe(true);
+    const coin = coins.data[0];
+    const { getByText } = renderWithRedux(
+      <Coin key={coin.id} index={0} name={coin.rank} coin={coin} />,
+    );
+    expect(getByText('Bitcoin') !== null).toBe(true);
   });
 });
