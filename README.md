@@ -22,8 +22,6 @@ The app consist of 2 pages.
 - Home page: Shows the list of the top 100 Crypto currencies with basic details
 - Details page: Shows details of each individual Crytpto currency when it is clicked on.
 
-Original design idea by: [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
-
 Flag pictures are from website [www.countryflags.io](https://www.countryflags.io/)
 
 ![Home Page](./src/images/homepage.png)  ![Details Page](./src/images/detailsPage.png)
@@ -100,6 +98,8 @@ Give a ⭐️ if you like this project!
 
 
 ## Acknowledgments
+
+Original design idea by: [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 - Hat tip to anyone whose code was used 🔰
 - Inspiration 💘

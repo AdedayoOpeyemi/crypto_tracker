@@ -1,5 +1,4 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 import coinsReducer from './coins/coins';
 
@@ -9,7 +8,7 @@ const reducer = combineReducers({
 
 const store = createStore(
   reducer,
-  applyMiddleware(thunkMiddleware, logger),
+  applyMiddleware(thunkMiddleware),
 );
 
 export default store;
