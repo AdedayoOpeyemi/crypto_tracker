@@ -4,22 +4,14 @@ import { useParams } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { fetchApiData } from '../redux/coins/coins';
 import Loading from './Loading';
-// import { useSelector, useDispatch } from 'react-redux';
 
 function Details() {
   const params = useParams();
   const { id } = params;
-  // const { coins } = useSelector((state) => state);
-  // console.log(coins);
   const internationalNumberFormat = new Intl.NumberFormat('en-US');
 
   const coins = useSelector((state) => state.coins.data);
-  // eslint-disable-next-line no-console
   const loading = useSelector((state) => state.coins.loading);
-  // const [filtered, setFiltered] = useState('');
-  // const updateFilter = (e) => {
-  //   setFiltered(e.target.value);
-  // };
   const dispatch = useDispatch();
   const loadCoinAction = bindActionCreators(fetchApiData, dispatch);
 
@@ -31,14 +23,7 @@ function Details() {
   }, [loading]);
 
   let ans = (<Loading />);
-  // const format = 'en-US';
-
-  // eslint-disable-next-line no-console
-  // console.log(coins);
   if (coins && coins.length > 0) {
-    // eslint-disable-next-line semi
-    // eslint-disable-next-line no-console
-    console.log(coins);
     const coin = coins.find((coin) => coin.id === id);
     const {
       name, nameid, symbol,
@@ -52,11 +37,17 @@ function Details() {
     } = coin;
 
     ans = (
-      <div className="container text-white details-header">
+      <div className="container-fluid text-white details-header">
         <div className="row coin-header light-primary">
           <div className="d-flex flex-column justify-content-center text-center">
             <img
               src={`https://cryptologos.cc/logos/${nameid}-${symbol.toLowerCase()}-logo.svg`}
+              onError={(event) => {
+                // eslint-disable-next-line no-param-reassign
+                event.target.src = 'https://comnplayscience.eu/app/images/notfound.png';
+                // eslint-disable-next-line no-param-reassign
+                event.onerror = null;
+              }}
               alt={name}
               className="detailsImage d-block mx-auto"
             />

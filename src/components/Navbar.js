@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaMicrophone, FaCog, FaAngleLeft } from 'react-icons/fa';
-// import { IoChevronBackOutline } from 'react-icons/io';
-// import { IoMdSettings } from 'react-icons/io';
-// import { FaAngleLeft, FaMicrophone } from 'react-icons/fa';
 
 const NavBar = () => {
   const { pathname } = useLocation();
   return (
-    <header className="shadow">
+    <header className="shadow container-fluid">
       <nav className="p-2 text-white primary-blue d-flex justify-content-between">
         <Link to="/" className="text-decoration-none text-white fw-bold d-flex align-items-center justify-content-center">
           { pathname !== '/'

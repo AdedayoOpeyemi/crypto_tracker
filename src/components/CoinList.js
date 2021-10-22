@@ -38,7 +38,7 @@ const Coinlist = () => {
           <FilterInput updateFilter={updateFilter} />
         </div>
       </div>
-      <div className="category-description">
+      <div className=" container-fluid category-description">
         <p>Top 100 Coins</p>
       </div>
       <div className="container-fluid position-relative">
