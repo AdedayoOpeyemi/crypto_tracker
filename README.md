@@ -2,6 +2,9 @@
 
 # Crypto Tracker(Mobile focused)
 
+[Video presentation](https://www.loom.com/share/c7a966dd8dff496a9355c3e10631c4bc?sharedAppSource=personal_library)
+
+
 React App that allows anyone to keep track of the top 100 Crpto currencies. Details such as 
 - Name
 - Logo
