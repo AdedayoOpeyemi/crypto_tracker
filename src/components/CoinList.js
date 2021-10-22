@@ -33,8 +33,15 @@ const Coinlist = () => {
   }
   return (
     <>
-      <FilterInput updateFilter={updateFilter} />
-      <div className="container">
+      <div className="container-fluid">
+        <div className="row filterContainer">
+          <FilterInput updateFilter={updateFilter} />
+        </div>
+      </div>
+      <div className="category-description">
+        <p>Top 100 Coins</p>
+      </div>
+      <div className="container-fluid position-relative">
         <div className="row row-cols-2">
           {ans}
         </div>

@@ -1,30 +1,31 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaMicrophone } from 'react-icons/fa';
+import { FaMicrophone, FaCog, FaAngleLeft } from 'react-icons/fa';
+// import { IoChevronBackOutline } from 'react-icons/io';
 // import { IoMdSettings } from 'react-icons/io';
 // import { FaAngleLeft, FaMicrophone } from 'react-icons/fa';
 
 const NavBar = () => {
   const { pathname } = useLocation();
   return (
-    <header className="py-2 shadow">
-      <nav className="px-4 text-white light-primary d-flex justify-content-between">
+    <header className="shadow">
+      <nav className="p-2 text-white primary-blue d-flex justify-content-between">
         <Link to="/" className="text-decoration-none text-white fw-bold d-flex align-items-center justify-content-center">
           { pathname !== '/'
             ? (
               <>
-                <p>Back</p>
+                <FaAngleLeft className="nav-icons" />
               </>
             )
             : ''}
         </Link>
-        <h3 className="m-0 d-flex align-items-center justify-content-center">
+        <h3 className="m-0 d-flex align-items-center p-1 justify-content-center">
           Cyrpto Tracker
         </h3>
         <div className="m-0 d-flex flex-row p-1">
-          <FaMicrophone />
+          <FaMicrophone className="nav-icons" />
           <div className="mx-2" />
-          <p>Settings</p>
+          <FaCog className="nav-icons" />
         </div>
       </nav>
     </header>

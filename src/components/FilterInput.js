@@ -4,7 +4,9 @@ import React from 'react';
 const FilterInput = (props) => {
   const { updateFilter } = props;
   return (
-    <input type="text" placeholder="Search for" onChange={updateFilter} />
+    <div className="col d-flex align-items-center justify-content-center">
+      <input type="text" className="input-form" placeholder="Search for" onChange={updateFilter} />
+    </div>
   );
 };
 export default FilterInput;

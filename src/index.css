@@ -1,10 +1,11 @@
 :root {
+  --primary-nav-color: #4369b2;
+  --primary-header-color: #5889e4;
+  --primary-description-color: #35548b;
+  --light-shade-card: #4167af;
+  --dark-shade-card: #4063a5;
   --lightest-primary: #5383e1;
   --light-primary: #4369b2;
-
-  /* --intense-magenta: #c22f6c;
-  --dark-primary: #35548b;
-  --white-with-little-red: #d337b4; */
 }
 
 body {
@@ -23,6 +24,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: skyblue;
+  max-width: 600px;
 }
 
 code {
@@ -35,22 +38,115 @@ code {
     monospace;
 }
 
-.light-primary {
-  background-color: var(--lightest-primary);
+header {
+  background-color: var(--primary-nav-color);
 }
 
-.primary-blue {
-  background-color: var(--light-primary);
+.light-card {
+  background-color: var(--light-shade-card);
 }
 
-.intense-magenta {
-  background-color: var(--intense-magenta) !important;
+.dark-card {
+  background-color: var(--dark-shade-card);
 }
 
-.light-magenta {
-  background: var(--light-magenta);
+.category-description {
+  background-color: var(--primary-description-color);
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.category-description > p {
+  margin: 0;
 }
 
 .coinlist-holde {
   padding: 20px;
+}
+
+.coinCardImage {
+  max-width: 80px;
+  width: 25%;
+}
+
+.detailsCardImage {
+  width: 200px;
+  padding: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.filterContainer {
+  height: 200px;
+  background-color: var(--primary-description-color);
+}
+
+.coin-header {
+  height: 320px;
+}
+
+.App-container {
+  max-width: 600px;
+}
+
+.input-form {
+  width: 50%;
+  min-width: 120px;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+.coin-name {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.details-header {
+  background-color: var(--primary-header-color);
+}
+
+.details-body {
+  background-color: var(--dark-shade-card);
+  height: 600px;
+}
+
+.detailsImage {
+  height: 200px;
+}
+
+.coin-property {
+  list-style-type: none;
+  padding-top: 40px;
+}
+
+.coin-property > li {
+  padding: 0.5rem;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.property-title {
+  font-size: 14px;
+  font-style: oblique;
+  color: rgb(230, 236, 236);
+}
+
+.nav-icons {
+  font-size: 20px;
+  padding: 0;
 }
