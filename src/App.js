@@ -1,28 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  Route, Switch,
+} from 'react-router-dom';
+import Details from './components/CoinDetails';
+// import Home from './components/HomePage';
+import NavBar from './components/Navbar';
+import CoinList from './components/CoinList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <main>
+        <Switch>
+          <Route path="/coin/:id">
+            <Details className="h-100" />
+          </Route>
+          <Route path="/">
+            <CoinList className="coinlist-holde" />
+          </Route>
+        </Switch>
+      </main>
+    </>
   );
 }
 

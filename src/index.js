@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min';
 import './index.css';
 import App from './App';
+import store from './redux/configureStore';
+import { fetchApiData } from './redux/coins/coins';
 import reportWebVitals from './reportWebVitals';
+
+store.dispatch(fetchApiData);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Router>
+        <App className="App-container" />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

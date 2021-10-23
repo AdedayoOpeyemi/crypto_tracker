@@ -1,3 +1,13 @@
+:root {
+  --primary-nav-color: #4369b2;
+  --primary-header-color: #5889e4;
+  --primary-description-color: #35548b;
+  --light-shade-card: #4167af;
+  --dark-shade-card: #4063a5;
+  --lightest-primary: #5383e1;
+  --light-primary: #4369b2;
+}
+
 body {
   margin: 0;
   font-family:
@@ -14,6 +24,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(67, 105, 178);
+  background: linear-gradient(315deg, rgba(67, 105, 178, 1) 0%, rgba(88, 137, 228, 1) 41%, rgba(182, 198, 202, 1) 100%);
 }
 
 code {
@@ -24,4 +36,116 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+main {
+  height: calc(100vh - 51px);
+}
+
+header {
+  background-color: var(--primary-nav-color);
+}
+
+.light-card {
+  background-color: var(--light-shade-card);
+}
+
+.dark-card {
+  background-color: var(--dark-shade-card);
+}
+
+.category-description {
+  background-color: var(--primary-description-color);
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.category-description > p {
+  margin: 0;
+}
+
+.coinlist-holde {
+  padding: 20px;
+}
+
+.coinCardImage {
+  max-width: 80px;
+  width: 25%;
+}
+
+.detailsCardImage {
+  width: 200px;
+  padding: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.filterContainer {
+  height: 200px;
+  background-color: var(--primary-description-color);
+}
+
+.coin-header {
+  height: 320px;
+}
+
+.input-form {
+  width: 50%;
+  min-width: 120px;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+.coin-name {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.details-header {
+  background-color: var(--primary-header-color);
+}
+
+.details-body {
+  background-color: var(--dark-shade-card);
+}
+
+.detailsImage {
+  height: 200px;
+}
+
+.coin-property {
+  list-style-type: none;
+  padding-top: 40px;
+}
+
+.coin-property > li {
+  padding: 0.5rem;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.property-title {
+  font-size: 14px;
+  font-style: oblique;
+  color: rgb(230, 236, 236);
+}
+
+.nav-icons {
+  font-size: 20px;
+  padding: 0;
 }

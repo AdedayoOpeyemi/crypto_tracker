@@ -37,3 +37,8 @@
     transform: rotate(360deg);
   }
 }
+
+.coin-card {
+  width: 50%;
+  height: 200px;
+}
